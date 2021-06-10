@@ -1,5 +1,5 @@
 class OrbitHomePage
-  require_relative '../modules/Utilities_module'
+  require_relative '../module/Utilities_module'
   include PageObject
   include UtilitiesModule
   page_url "www.orbitz.com"
@@ -22,7 +22,7 @@ class OrbitHomePage
   button(:choose_arr_date_btn1, id: 'd1-btn')
 
   button(:submit_button, data_testid: 'submit-button')
-  divs(error_messages, class: 'uitk-error-message')
+  divs(:error_messages, class: 'uitk-error-message')
 
   def get_all_error_message
     error_messages_elements.map(&:text)

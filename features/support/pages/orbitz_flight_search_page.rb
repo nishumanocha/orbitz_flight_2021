@@ -1,6 +1,6 @@
 class OrbitzFlightSearchPage
 
-  require_relative '../modules/utilities_module'
+  require_relative '../module/utilities_module'
 
   include PageObject
   include UtilitiesModule
