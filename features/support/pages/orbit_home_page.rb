@@ -35,7 +35,7 @@ class OrbitHomePage
 
   def verify_leaving_from city_name, air_code
     choose_from_element.click
-    self.leaving_from = city_name, air_code
+     self.leaving_from = city_name, air_code
     #leaving_from_element.set  city_name, air_code
     all_dep_airports_element.list_item_element.each do |each_airport|
       p each_airport.text
@@ -51,7 +51,7 @@ class OrbitHomePage
   def verify_going_to city_name, air_code
     choose_going_element.click
     self.going_to = city_name, air_code
-    all_arr - airport_element.list_item_elements.each do |each_airport|
+    all_arr_airport_element.list_item_elements.each do |each_airport|
       p each_airport
       if each_airport.text include? air_code
         each_airport.click
